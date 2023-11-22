@@ -1,7 +1,21 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import random
+
 if __name__ == "__main__":
-    julySales = (15000, 7300)
-    augustSales = (3456, 8900)
-    print(f"Sum of sales in July and August = {sum(julySales) + sum(augustSales)}")
+    julySales = [
+        (random.randint(100, 1000) for i in range(31)),
+        (random.randint(100, 1000) for i in range(31))
+    ]
+    augustSales = [
+        (random.randint(100, 1000) for i in range(31)),
+        (random.randint(100, 1000) for i in range(31))
+    ]
+    res = (
+        sum(julySales[0])
+        + sum(julySales[1])
+        + sum(augustSales[0])
+        + sum(augustSales[1])
+    )
+    print(f"Sum of sales in July and August = {res}")
