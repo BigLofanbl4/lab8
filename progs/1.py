@@ -4,18 +4,18 @@
 import random
 
 if __name__ == "__main__":
-    julySales = [
+    july_sales = [
         (random.randint(100, 1000) for i in range(31)),
         (random.randint(100, 1000) for i in range(31))
     ]
-    augustSales = [
+    august_sales = [
         (random.randint(100, 1000) for i in range(31)),
         (random.randint(100, 1000) for i in range(31))
     ]
     res = (
-        sum(julySales[0])
-        + sum(julySales[1])
-        + sum(augustSales[0])
-        + sum(augustSales[1])
+        sum(july_sales[0])
+        + sum(july_sales[1])
+        + sum(august_sales[0])
+        + sum(august_sales[1])
     )
     print(f"Sum of sales in July and August = {res}")
